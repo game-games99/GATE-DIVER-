@@ -3,8 +3,6 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-inline'; style-src 'unsafe-inline';">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Gate Diver</title>
@@ -32,7 +30,7 @@
 
 - { margin: 0; padding: 0; box-sizing: border-box; }
 
-body {
+html, body {
 background: var(–bg);
 color: var(–text);
 font-family: “Hiragino Sans”, “Hiragino Kaku Gothic ProN”, “Yu Gothic”, “Meiryo”, “Noto Sans JP”, sans-serif;
@@ -44,6 +42,7 @@ overflow-x: hidden;
 body::before {
 content: ‘’;
 position: fixed;
+/* GitHub Pages / iOS Safari対応 */
 inset: 0;
 background:
 radial-gradient(ellipse 60% 40% at 20% 80%, rgba(74,158,255,0.04) 0%, transparent 60%),
